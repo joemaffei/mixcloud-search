@@ -1,0 +1,35 @@
+.Header {
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem;
+    height: 9rem;
+    &-line {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-title {
+        margin:0;
+        margin-bottom: 1rem;
+        font-size: 24px;
+    }
+    &-search {
+        padding: 1rem;
+        border: 0;
+        border-radius: .5rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background: #0003;
+        color: white;
+    }
+    &-submit {
+        padding: 1rem;
+        border: 0;
+        background: var(--color-secondary);
+        color: white;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &-count {
+        color: #fffc;
+    }
+}
