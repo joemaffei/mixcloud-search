@@ -1,4 +1,4 @@
-import { LinkRenderer } from './LinkRenderer';
+import { LinkRenderer } from './components/LinkRenderer';
 
 export const columnDefs = [
     {

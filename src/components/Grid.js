@@ -3,7 +3,7 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { AgGridReact } from 'ag-grid-react';
 import { object } from 'prop-types';
 import React, { useRef } from 'react';
-import { columnDefs } from './columnDefs';
+import { columnDefs } from '../columnDefs';
 
 export function Grid({ rowData }) {
     const grid = useRef();

@@ -1,4 +1,4 @@
-import { number, func, bool } from 'prop-types';
+import { bool, func, number } from 'prop-types';
 import React from 'react';
 import './Header.scss';
 
