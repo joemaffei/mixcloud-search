@@ -10,8 +10,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "parcel ./src/index.html --open",
         "prebuild": "shx rm -rf ./dist/*",
-        "build": "parcel build ./src/index.html --public-url ./ --experimental-scope-hoisting",
-        "build:netlify": "npx parcel build ./src/index.html --public-url ./ --experimental-scope-hoisting",
+        "build": "parcel build ./src/index.html --public-url ./",
+        "build:netlify": "npx parcel build ./src/index.html --public-url ./",
         "lint": "eslint src/ --ext .js",
         "precommit": "lint-staged"
     },
