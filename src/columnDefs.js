@@ -9,6 +9,20 @@ export const columnDefs = [
         cellRendererFramework: LinkRenderer,
     },
     {
+        headerName: 'Date',
+        field: 'created_time',
+        sortable: true,
+        resizable: true,
+        suppressSizeToFit: true,
+    },
+    {
+        headerName: 'Length',
+        field: 'audio_length',
+        sortable: true,
+        resizable: true,
+        suppressSizeToFit: true,
+    },
+    {
         headerName: 'Played',
         field: 'play_count',
         sortable: true,

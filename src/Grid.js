@@ -13,7 +13,13 @@ export function Grid({ rowData }) {
     }
 
     return (
-        <div className="ag-theme-balham" style={{ height: '100vh', width: '100%' }}>
+        <div
+            className="ag-theme-balham"
+            style={{
+                height: 'calc(100vh - var(--header-height)',
+                width: '100%',
+            }}
+        >
             <AgGridReact ref={grid} columnDefs={columnDefs} rowData={rowData} onRowDataChanged={handleRowDataChanged} />
         </div>
     );
