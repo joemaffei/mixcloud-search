@@ -1,10 +1,30 @@
-import React, { useState } from 'react';
+import React, { createContext, useState, useReducer } from 'react';
 import { Grid } from './Grid';
 import { Header } from './Header';
+import ReactPlayer from 'react-player';
 
 const limit = 100;
 
+export const AppContext = createContext();
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'SET_URL':
+            return {
+                ...state,
+                url: action.payload,
+            };
+        default:
+            return state;
+    }
+};
+
+const initialState = {
+    url: null,
+};
+
 export function App() {
+    const [state, dispatch] = useReducer(reducer, initialState);
     const [rowData, setRowData] = useState();
     const [searching, setSearching] = useState();
     const [count, setCount] = useState(0);
@@ -36,9 +56,10 @@ export function App() {
     }
 
     return (
-        <div>
+        <AppContext.Provider value={dispatch}>
             <Header onSubmit={handleSubmit} searching={searching} count={count} />
             <Grid rowData={rowData} />
-        </div>
+            <ReactPlayer url={state.url} width="100%" height="120px" playing />
+        </AppContext.Provider>
     );
 }
