@@ -1,7 +1,7 @@
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { AgGridReact } from 'ag-grid-react';
-import { object } from 'prop-types';
+import { arrayOf, object } from 'prop-types';
 import React, { useRef } from 'react';
 import { columnDefs } from '../columnDefs';
 
@@ -16,7 +16,7 @@ export function Grid({ rowData }) {
         <div
             className="ag-theme-balham"
             style={{
-                height: 'calc(100vh - var(--header-height)',
+                height: 'calc(100vh - var(--header-height) - 60px',
                 width: '100%',
             }}
         >
@@ -26,5 +26,5 @@ export function Grid({ rowData }) {
 }
 
 Grid.propTypes = {
-    rowData: object,
+    rowData: arrayOf(object),
 };
