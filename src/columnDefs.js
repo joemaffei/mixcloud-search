@@ -1,12 +1,9 @@
-import { LinkRenderer } from './components/LinkRenderer';
-
 export const columnDefs = [
     {
         headerName: 'Name',
         field: 'name',
         sortable: true,
         resizable: true,
-        cellRendererFramework: LinkRenderer,
     },
     {
         headerName: 'Date',
